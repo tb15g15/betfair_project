@@ -5,7 +5,7 @@ This project is focussed on constructing an agent that acts on the Betfair Excha
 <u> __Data__ </u>
 The previous market data is taken from the Betwise Smartform Racing Database : https://www.betwise.co.uk/smartform.
 
-<u> Packages </u> 
+<u> __Packages__ </u> 
 - ```betfairlightweight```
 - ```sqlalchemy```
 - ```pymysql```
