@@ -7,9 +7,13 @@ __Data__
 The previous market data is taken from the Betwise Smartform Racing Database : https://www.betwise.co.uk/smartform.
 
 __Packages__
+
+The necessary packages/dependencies to be installed are:
 - ```betfairlightweight```
 - ```sqlalchemy```
 - ```pymysql```
 - ```pandas```
 - ```numpy```
 - ```scikit```
+
+...
