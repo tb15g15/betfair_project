@@ -1,12 +1,14 @@
 # Betfair Exchange Trading Project
 
-_This project is focussed on constructing an agent that acts on the Betfair Exchange to perform trades given some specified criteria derived from previous market data._
+_This project aims to build a trading bot that acts on the Betfair Exchange to execute orders based on some 'pre-specified' criteria derived from previous market data._
 
 __Motivation__
 
 __Build Status__
 
-__Code Style__
+__File Structure__
+
+The folder/file structure & naming conventions are inspired by 'Cookiecutter Data Science' : https://drivendata.github.io/cookiecutter-data-science/ 
 
 __Data__
 
