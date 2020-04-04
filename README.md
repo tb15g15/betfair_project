@@ -16,7 +16,7 @@ __Login Credentials__
 
 Usernames & Passwords should be stored within the git root folder and follow the format below;
 
-`sql_logins.txt` :
+`sql_logins.json` :
 ```
 { 
 "UID" : "YOUR_USERNAME",
@@ -25,7 +25,7 @@ Usernames & Passwords should be stored within the git root folder and follow the
 }
 ```
 
-`api_logins.txt` :
+`api_logins.json` :
 ```
 { 
 "my_username" : "YOUR_BETFAIR_USERNAME", 
