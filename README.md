@@ -4,7 +4,36 @@ _This project builds a Betfair Exchange trading agent that executes market order
 
 __File Structure__
 
-The folder/file structure & naming conventions are taken from 'Cookiecutter Data Science' : https://drivendata.github.io/cookiecutter-data-science/ 
+The folder/file structure & naming conventions are taken from: https://drivendata.github.io/cookiecutter-data-science/.
+
+`data` : Stores samples of data here. Source data is to be saved locally in MySQL database.
+`notebooks` : Contains jupyter notebooks to document data analysis, general research and model testing.
+`src` : contains scripts to place trades.
+
+__Login Credentials__
+
+Usernames & Passwords should be stored within the git root folder and follow the format below;
+
+`sql_logins.txt` :
+```
+{ 
+"UID" : "YOUR_USERNAME",
+"PWD" : "YOUR_PASSWORD,
+"DB" : "YOUR_DATABASE_NAME"
+}
+```
+
+`api_logins.txt` :
+```
+{ 
+"my_username" : "YOUR_BETFAIR_USERNAME", 
+"my_password" : "YOUR_BETFAIR_PASSWORD", 
+"my_app_key" : "YOUR_APP_KEY, 
+"certs_path" : "YOUR_CERTIFICATE_PATH"
+}
+```
+
+BetfairAPI
 
 __Data__
 
