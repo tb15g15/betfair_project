@@ -10,7 +10,7 @@ The folder/file structure & naming conventions are taken from: https://drivendat
 
 - `notebooks` : Contains jupyter notebooks to document data analysis, general research and model testing.
 
-- `src` : Contains scricpts for the trading bot that interact and place bets on the API.
+- `src` : Contains scripts for the trading bot that connects, pulls data and places bets on the Betfair API.
 
 __Login Credentials__
 
@@ -20,7 +20,7 @@ Credentials should be stored within `.json` files at the git root directory and 
 ```
 { 
 "UID" : "YOUR_USERNAME",
-"PWD" : "YOUR_PASSWORD,
+"PWD" : "YOUR_PASSWORD",
 "DB" : "YOUR_DATABASE_NAME"
 }
 ```
@@ -30,7 +30,7 @@ Credentials should be stored within `.json` files at the git root directory and 
 { 
 "my_username" : "YOUR_BETFAIR_USERNAME", 
 "my_password" : "YOUR_BETFAIR_PASSWORD", 
-"my_app_key" : "YOUR_APP_KEY, 
+"my_app_key" : "YOUR_APP_KEY", 
 "certs_path" : "YOUR_CERTIFICATE_PATH"
 }
 ```
@@ -39,17 +39,17 @@ __Data__
 
 The historical market data is taken from the Betwise Smartform Racing Database : https://www.betwise.co.uk/smartform.
 
-The daily data is streamed using the ```betfairlightweight``` package : https://github.com/liampauling/betfair.
+The daily data is streamed using the `betfairlightweight` package : https://github.com/liampauling/betfair.
 
 
 __Packages__
 
 The necessary packages/dependencies to be installed are:
-- ```betfairlightweight``` : Lightweight, super fast (uses c libraries) pythonic wrapper for Betfair API-NG allowing all betting operations (including market and order streaming) and account operations.
-- ```sqlalchemy```
-- ```pymysql```
-- ```pandas```
-- ```numpy```
-- ```scikit```
+- `betfairlightweight` : Lightweight, super fast (uses c libraries) pythonic wrapper for Betfair API-NG allowing all betting operations (including market and order streaming) and account operations.
+- `sqlalchemy`
+- `pymysql`
+- `pandas`
+- `numpy`
+- `scikit`
 
 ...
