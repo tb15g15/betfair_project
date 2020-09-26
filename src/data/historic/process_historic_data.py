@@ -35,17 +35,20 @@ print("Stream of " + test_file.name + ' completed.')
 
 # create df
 df = dict_to_df(datadict)
-df = pre_filter_races(df)
-df = extract_race_info(df)
-df = create_timedif(df)
-df = filter_timedif(df)
-df = create_time_bins(df, T_PRE, T_POST)
-df = runner_groupby(df, T_PRE, T_POST)
+# df = pre_filter_races(df)
+# df = extract_race_info(df)
+# df = create_timedif(df)
+# df = filter_timedif(df)
+# df = create_time_bins(df, T_PRE, T_POST)
+# df = runner_groupby(df, T_PRE, T_POST)
 
 print(df)
 
 
-
+# to do
+# - move t_pre/post as default params in utils
+# way to find out most granular time frame possible? then create bins from this?
+# find out why some files aren't processed correctly?
 
 # logout
 trading.logout()

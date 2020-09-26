@@ -6,7 +6,6 @@ from betfairlightweight import StreamListener
 from betfairlightweight.streaming.stream import MarketStream
 
 # stream objects
-
 datadict = {'Time': [],
        'MarketId' : [],
        'Status' : [],
@@ -74,6 +73,10 @@ def dict_to_df(datadict):
     
     df['MarketId'] = df['MarketId'].astype(str)
     df['SelectionId'] = df['SelectionId'].astype(str)
+
+    df['BackWAP'] = df.apply(lambda x: x['BackSize'])
+
+    # weighted sum calculation = (price / size) * (sum(sizes))
     
     df['LayPrice'] = df['LayPrice'].apply(lambda x: x[0] if x else np.nan)
     df['LaySize'] = df['LaySize'].apply(lambda x: x[0] if x else np.nan)
