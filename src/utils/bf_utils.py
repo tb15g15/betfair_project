@@ -4,7 +4,7 @@ from pathlib import Path, PurePath
 from betfairlightweight import APIClient
 
 # setting paths
-project_dir = Path.cwd().parents[2]
+project_dir = Path.cwd().parents[1]
 logins_dir = project_dir / 'api_logins.json'
 
 # defining functions
