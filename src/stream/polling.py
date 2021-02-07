@@ -2,6 +2,7 @@
 from utils import bf_utils
 from betfairlightweight import filters
 import pandas as pd
+import time
 
 # logging in
 trading = bf_utils.api_login()
@@ -27,10 +28,11 @@ for m in market_catalogues:
     # race_info['start'] = m.market_start_time
     # race_info['runners'] = [(r.selection_id, r.runner_name) for r in m.runners]
 
-import time
-t_end = time.time() + 60 * 15
 
-while time.time() < t_end: # if : inplay == True
+t_end = time.time() + 60 * 10 # 10 mins
+
+# if start time is now then run for 10 mins... 
+while time.time() < t_end: 
     # race/market price info
     market_books = trading.betting.list_market_book(
         market_ids=[race_info['id']],
@@ -43,7 +45,7 @@ while time.time() < t_end: # if : inplay == True
     for mb in market_books:
         market_info['id'] = mb.market_id
         market_info['inplay'] = mb.inplay
-        # market_info['status'] = mb.status
+        market_info['status'] = mb.status
         # market_info['matched'] = mb.total_matched
 
         market_info['a2b_prices'] = [r.ex.available_to_back[0].price if r.ex.available_to_back else 1.01 for r in mb.runners]
@@ -51,10 +53,8 @@ while time.time() < t_end: # if : inplay == True
         # market_info['a2l_prices'] = [r.ex.available_to_back[0].price if r.ex.available_to_back else 1.01 for r in mb.runners]
         # market_info['a2l_sizes'] = [r.ex.available_to_back[0].size if r.ex.available_to_back else 0 for r in mb.runners]
 
-    print(race_info)
-    print('\n')
-    # print(mb_info)
-    print('\n')
+
+    print(race_info['id'], market_info['id'], market_info['inplay'], market_info['status'])
     print(market_info['a2b_prices'])
 
     book = round(sum([round(1/o, 5) for o in market_info['a2b_prices']]), 3)
